@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图标字体</title>
+  <link rel="stylesheet" href="../font/css/all.css">
+  <style>
+    li {
+      list-style: none;
+    }
+
+    /* 
+    通过伪元素设置图标字体
+    1.找到要设置图标的元素通过before或after选中
+    2.在content中设置字体编码
+    3.设置字体的样式 
+      fas
+      font-family: 'Font Awesome 5 Free';
+
+      fab
+      font-family: 'Font Awesome 5 Brands';
+
+      font-weight:900
+    */
+
+    li::before {
+      content: '\f1b0';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      margin-right: 10px;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 图标字体(iconfont) 
+    1.下载fontawesom
+    2.解压
+    3.css和webfonts添加到项目
+    4.将all.css引入到网页
+    5.使用图标字体
+      -直接通过类名来使用图标字体
+       class="fas fa-bell
+       class="fab fa-accessible-icon"
+
+  -->
+  <i class="fas fa-bell" style="font-size: 30px; color: red;"></i>
+  <i class="fas fa-bell-slash"></i>
+  <i class="fab fa-accessible-icon"></i>
+  <!-- 
+    通过实体使用图标字体:
+      &#x 图标的编码; class中指定fas 
+  -->
+  <span class="fas">&#xf0f3</span>
+  <ul>
+    <li>锄禾日当午</li>
+    <li>汗滴何下土</li>
+    <li>谁知盘中餐</li>
+    <li>粒粒皆辛苦</li>
+  </ul>
+
+</body>
+
+</html>
