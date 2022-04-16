@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字体</title>
+  <style>
+    /* font-face 可以将服务器中的字体直接提供给用户去使用*/
+    @font-face {
+      font-family: 'myfont';
+      src: url();
+    }
+
+    /* 
+    字体族
+    font-family 
+    可选值:
+    serif       衬线字体
+    sans-serif  非衬线字体
+    monospace   等宽字体
+    -指定字体的类别，浏览器会自动使用该类别下的字体
+    -可以同时指定多个字体，多个字体间使用，分隔
+    字体生效时优先使用第一个字体，第一个无法使用则使用第二个，以此类推
+    Microsoft Yahei,SimSun, Arial, "Arial Narrow", HELVETICA;
+    */
+    p {
+      color: red;
+      font-size: 30px;
+      font-family: Microsoft Yahei, SimSun, Arial, "Arial Narrow", HELVETICA;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    今天天气真不错， Hello How are you!
+  </p>
+</body>
+
+</html>
