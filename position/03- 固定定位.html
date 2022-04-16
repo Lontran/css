@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-size: 60px;
+      height: 2000px;
+    }
+
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background: #bfa;
+    }
+
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background: orange;
+      /*
+      定位是一种更高级的布局手段
+      static 默认值，无素是静止的没有开启定位
+      relative 开启元素相对定位
+      absolute 开启元素绝对定位
+      fixed 开启元素固定定位
+      sticky 开启元素的粘滞定位
+      固定定位(fixed):
+      1.固定定位是一种绝对定位，所以固定定位的大部分特点都和绝对定位一样;
+        唯一不同的是固定定位永远相对于浏览器的视口进行定位
+      浏览器视口：
+      不会随网页滚动条的滚动而滚动
+
+      偏移量(offset):
+      left, top, bottom, right
+      */
+      position: fixed;
+      top: 0px;
+      left: 0px;
+
+    }
+
+    .box3 {
+      width: 200px;
+      height: 200px;
+      background: yellow;
+    }
+
+    .box4 {
+      width: 400px;
+      height: 400px;
+      background: blueviolet;
+    }
+
+    .box5 {
+      width: 300px;
+      height: 300px;
+      background: red;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">1</div>
+  <div class="box4">
+    4
+    <div class="box5">
+      5
+      <div class="box2">2</div>
+    </div>
+  </div>
+
+  <div class="box3">3</div>
+</body>
+
+</html>
