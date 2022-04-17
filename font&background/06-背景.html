@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>背景</title>
+  <style>
+    .box1 {
+      width: 512px;
+      height: 512px;
+      background-color: orange;
+      padding: 10px;
+      /*
+      background-image 设置背景图片
+        -可以同时设置背景图片和背景颜色，这样背景颜色会成为图片的背景色
+        -如果背景图片小于元素大小，则背景图片会自动在元素中平铺
+        -如果背景图片大于元素大小，将有部分背景无法完全显示
+        -如果背景图片与元素大小一致，则会正常显示
+      */
+      background-image: url(../images/icon.png);
+      /*
+      background-repeat 设置背景重复方式
+      -repeat默认值， 背景会沿x和y轴重复
+      -repeat-x: 沿x轴重复
+      -repeat-y: 沿y轴重复
+      -no-repeat: 背景图片不重复
+      */
+      background-repeat: no-repeat;
+      /*
+      background-position设置背景图片位置
+      通过top left right bottom center 几个方位来设置
+      -使用方位时必须同时指定两个值，如果只写一个则第二个默认为center
+      通过偏移量来指定背景图片的位置
+        水平方向的偏移量 垂直方向的偏移量
+      */
+      background-position: 0 0;
+
+      /* 默认情况下边线中也有背景 */
+      border: 10px red double;
+      /* 
+      background-clip设置背景的范围 
+      border-box：默认值，背景会出现在边框下边
+      padding-box:背景不会出现在边框下，只出现在内容区和内边距
+      content-box:背景只会出现在内容区
+      */
+      background-clip: content-box;
+      /*
+      background-origin设置背景图片偏移量的计算原点
+        padding-box:默认值，background-position从内边距处开始计算
+        content-box:背景图片的偏移量从内容区开始计算
+        border-box：背景图片的偏移量从边框开始计算
+      */
+      background-origin: content-box;
+      /* 
+      backgroumd 设置背景图片的大小
+      第一个值表示宽度，可以是百分数
+      第二个值表示高度
+      如果只写一个值，则第二个值默认是auto根据图片高宽比计算得出
+      cover:图片的比例不变，将元素铺满
+      contain:图片比例不变，将图片在元素中完整显示 
+      */
+      background-size: contain;
+
+    }
+
+    .box2 {
+      width: 300px;
+      height: 1000px;
+      background-image: url(../images/01.jpg);
+      background-repeat: no-repeat;
+      background-position: 100px 100px;
+      /*
+      background-attachment
+        背景图片是否跟随元素移动
+        可选值：
+          -scroll：默认值，背景图片会跟随元素移动
+          -fixed:背景会固定在页面中，不会随元素移动
+      */
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">
+    <div class="box2"></div>
+  </div>
+</body>
+
+</html>

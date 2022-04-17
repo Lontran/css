@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>径向渐变</title>
+  <style>
+    .box1 {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      /* 
+      radial-gradient()设置径向渐变 
+      默认情况下径向渐变的形状根据元素的形状来计算
+      正方形-->圆形
+      长方形-->椭圆形
+      -可以手指定径向渐变的大小
+      circle
+      ellipse
+      radial-gradient(circle, red 5px, orange);
+      -可以指定渐变的位置
+      radial-gradient(100px 100px at 0 0, red, orange);
+      */
+      background-image: radial-gradient(100px 100px at 0 0, red 5px, orange);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+</body>
+
+</html>
