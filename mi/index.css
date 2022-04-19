@@ -1,0 +1,254 @@
+.site-topbar {
+  position: relative;
+  height: 40px;
+  font-size: 12px;
+  color: #b0b0b0;
+  background-color: #333;
+}
+
+.site-topbar a {
+  line-height: 40px;
+  color: #b0b0b0;
+  display: inline-block;
+}
+
+.site-topbar a:hover {
+  color: white;
+}
+
+.sep {
+  margin: 0.3em;
+  color: #424242;
+}
+.site-topbar .topbar-nav {
+  float: left;
+}
+
+.site-topbar .topbar-cart {
+  float: right;
+  margin-left: 15px;
+  text-align: center;
+}
+
+.site-topbar .topbar-cart a {
+  width: 120px;
+}
+.site-topbar .topbar-info {
+  float: right;
+}
+
+.site-topbar .topbar-cart :hover {
+  background-color: white;
+  color: #ff6700;
+}
+
+.app {
+  position: relative;
+}
+
+.app:hover .qrcode,
+.app:hover::before {
+  display: block;
+  height: 148px;
+}
+
+/* .appcode:hover .app::before {
+  display: block;
+} */
+
+.app .qrcode {
+  position: absolute;
+  left: -40px;
+  width: 124px;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 5px #aaa;
+  text-align: center;
+  line-height: 1;
+  font-size: 14px;
+  color: black;
+  transition: height 0.3s;
+}
+
+.app .qrcode img {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 18px auto 12px;
+}
+
+.app:before {
+  content: '';
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -8px;
+  border-width: 0 8px 8px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff;
+}
+
+.site-header {
+  position: relative;
+  height: 100px;
+}
+
+.site-header .container {
+  width: 1226px;
+  margin: 0 auto;
+  background-color: red;
+}
+
+.site-header .header-logo {
+  float: left;
+  width: 62px;
+  margin-top: 22px;
+}
+
+.site-header .logo {
+  position: relative;
+  display: block;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  background-image: url(../images/mi-logo.png);
+  background-size: cover;
+}
+.site-header .header-nav {
+  float: left;
+  width: 850px;
+}
+.site-header .nav-list {
+  z-index: 10;
+
+  width: 1100px;
+  height: 88px;
+  margin: 0;
+  padding: 12px 0 0 30px;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+.header-nav-menu {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.nav-list li:hover ~ .header-nav-menu,
+.header-nav-menu:hover {
+  height: 228px;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+}
+.header-nav-menu img {
+  width: 160px;
+  height: 110px;
+  text-align: center;
+}
+.header-nav-menu .children-list {
+  margin: 0 auto;
+  width: 1226px;
+}
+
+.header-nav-menu .children-list li:before {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  z-index: 1;
+  width: 1px;
+  height: 100px;
+  content: '';
+  background-color: #e0e0e0;
+}
+
+.header-nav-menu li {
+  float: left;
+  position: relative;
+  padding: 35px 12px 0;
+  text-align: center;
+}
+
+.header-nav-menu .title {
+  color: #333;
+  font-size: 12px;
+}
+
+.header-nav-menu .price {
+  line-height: 20px;
+  color: #ff6700;
+  font-size: 12px;
+}
+.site-header .nav-item {
+  float: left;
+}
+
+.site-header .nav-item a {
+  display: block;
+  padding: 26px 10px 38px;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.site-header .nav-item:hover {
+  color: #ff6700;
+}
+
+.site-header .nav-category {
+  float: left;
+  width: 127px;
+  padding-right: 15px;
+}
+
+.link-category {
+  visibility: hidden;
+}
+.site-header .header-search {
+  float: right;
+  width: 296px;
+  height: 50px;
+  margin-top: 25px;
+  border: 1px solid #e0e0e0;
+}
+
+.header-search input {
+  float: left;
+  width: 242px;
+  padding: 0 10px;
+  border: none;
+  /* border-right: 1px solid #e0e0e0; */
+  height: 50px;
+  font-size: 14px;
+}
+
+.header-search input:focus,
+.header-search input:focus + button {
+  outline: 1px solid #ff6700;
+}
+
+.header-search button {
+  float: left;
+  margin-left: 1px;
+  width: 52px;
+  padding: 0;
+  border: none;
+  border-left: 1px solid #e0e0e0;
+  height: 50px;
+  background-color: #fff;
+  color: #616161;
+  font-size: 20px;
+}
+
+.header-search button:hover {
+  background-color: #ff6700;
+  color: white;
+}
